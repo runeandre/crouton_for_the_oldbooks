@@ -1,3 +1,35 @@
+# "crouton" for old Chromebooks (MODIFIED)
+
+This version of crouton has been modified to work with "Chrome OS 75.0.3770.144 (2019)" and old Chromebooks.
+<br>It has been tested on a "Samsung Chromebook 2 (XE503C32 - Peach Pi)", but should work on other Chromebooks as well.
+
+<b>The important change in this repository is reverting the debootstrap version to "1.0.128+nmu2" as the newer version doesn't work on the old "Samsung Chromebook 2 (XE503C32 - Peach Pi)".</b>
+
+<b>Ubuntu 20.04 Focal is the distro and version used.</b>
+<br>This is the newest version that worked so far in my testing.
+<br>Older versions also doesn't work as they tend to have GPU related issues.
+
+The commit where debootstrap was updated, and crouton stopped working on my old Chromebook: https://github.com/dnschneid/crouton/commit/4c6d9e23ca23ad3d17e4d7647eebe7374e7e975d
+
+## Instructions
+1. Boot the Chromebook with developer mode enabled (Google how to do this).
+2. Open a shell: Ctrl+Alt+T -> Type 'shell' and press enter.
+3. Open the home folder: 'cd'
+4. Open the Downloads folder: 'cd Downloads'
+5. Download crouton to the Chromebook: 'curl https://github.com/runeandre/crouton_for_the_oldbooks/release/crouton --output crouton'
+6. Copy crouton to bin folder: 'sudo install -Dt /usr/local/bin -m 755 crouton'
+7. Install Ubuntu 20.04 (Focal) with XFCE: 'sudo crouton -t xfce -r focal'
+8. Start Ubuntu: 'sudo startxfce4'"
+
+List Linux versions: 'crouton -r list'
+<br>Delete all installed Linux: 'sudo delete-chroot -a'
+
+The instructions are basically the same as the original.
+<br><b>The main difference is using this as the source, and that "focal" is specified as the Ubuntu version to use.</b>
+
+---
+
+
 # crouton: Chromium OS Universal Chroot Environment
 
 crouton is a set of scripts that bundle up into an easy-to-use,
@@ -10,9 +42,9 @@ admittedly pretty fun to say, though).
 
 All good things must come to an end, and considering
  * Chromium OS's introduction of increasingly strict shell safeguards,
- * the [change in cras's build tools](https://github.com/dnschneid/crouton/issues/4958),
- * the [removal of manifest v2 extensions](https://github.com/dnschneid/crouton/pull/5094),
- * the [removal of PNaCl, breaking xiwi](https://github.com/dnschneid/crouton/issues/5130),
+ * the [change in cras's build tools](https://github.com/runeandre/crouton_for_the_oldbooks/issues/4958),
+ * the [removal of manifest v2 extensions](https://github.com/runeandre/crouton_for_the_oldbooks/pull/5094),
+ * the [removal of PNaCl, breaking xiwi](https://github.com/runeandre/crouton_for_the_oldbooks/issues/5130),
  * oh, and Chromium OS being replaced by Android
 
 there's really not much to gain from continued development. Put another way, the
@@ -25,7 +57,7 @@ But this is crouton, not some Ready-for-Android Native Chroot Host, alas.
 Anyway, this means that:
  * The repo is now locked, and no further changes will be considered.
  * Eventually someone will want the latest Ubuntu added to the release list. See
-   [this commit](https://github.com/dnschneid/crouton/commit/6d80f57b91c39d10b29fde861aac5a2b5b9b3910)
+   [this commit](https://github.com/runeandre/crouton_for_the_oldbooks/commit/6d80f57b91c39d10b29fde861aac5a2b5b9b3910)
    for an example of how to do it on your own copy.
  * Sometime around July 2025, the GitHub project will be archived, making the
    issue tracker, discussions, and wiki read-only.
@@ -52,7 +84,7 @@ If you have an EOL device, though, crouton is still a great match for you!
 Chromium OS has introduced several security features over the years that impede
 the installation and usage of crouton. If your device is no longer receiving
 updates, the steps below will likely work for you. However, if you are still
-having trouble, please try the [community-maintained instructions](https://github.com/dnschneid/crouton/wiki/Updated-Installation-Instructions-for-Crouton).
+having trouble, please try the [community-maintained instructions](https://github.com/runeandre/crouton_for_the_oldbooks/wiki/Updated-Installation-Instructions-for-Crouton).
 
 In addition, goo.gl is going away! That means the goo.gl/fd3zc you know and love
 has been replaced with [git.io/JZEs0](https://git.io/JZEs0). That's a zero at
@@ -335,7 +367,7 @@ have to determine and download the bootstrap files every time.*
   * Have a Pixel or two or 4.352 million? `-t touch` improves touch support.
   * Want to share some files and/or folders between Chromium OS and your chroot?
     Check out the `/etc/crouton/shares` file, or read all about it in the wiki.
-  * Want more tips? Check the [wiki](https://github.com/dnschneid/crouton/wiki).
+  * Want more tips? Check the [wiki](https://github.com/runeandre/crouton_for_the_oldbooks/wiki).
 
 
 ## Issues?
@@ -370,7 +402,7 @@ of changes.  That having been said, here's some suggestions:
     it: fork crouton, fix everything, and create a pull request.
   * Are most bugs too high-level for you to defeat? Grind up some
     [EXP](https://en.wikipedia.org/wiki/Experience_point) by using
-    your fork to eat [pie](https://github.com/dnschneid/crouton/labels/pie).
+    your fork to eat [pie](https://github.com/runeandre/crouton_for_the_oldbooks/labels/pie).
 
 
 ## Are there other, non-Contributory ways I can help?
@@ -385,11 +417,11 @@ There's a way For Everyone to help!
   * Something broken? File a bug! Bonus points if you try to fix it. It helps if
     you provide the output of `croutonversion` (or the output of
     `cat /etc/lsb-release` from Crosh) when you submit the bug.
-  * Look through [open issues](https://github.com/dnschneid/crouton/issues?state=open)
+  * Look through [open issues](https://github.com/runeandre/crouton_for_the_oldbooks/issues?state=open)
     and see if there's a topic or application you happen to have experience
     with. And then, preferably, share that experience with others.
-  * Find issues that need [wiki entries](https://github.com/dnschneid/crouton/issues?labels=needswiki&state=open,closed)
-    and add the relevant info to the [wiki](https://github.com/dnschneid/crouton/wiki).
+  * Find issues that need [wiki entries](https://github.com/runeandre/crouton_for_the_oldbooks/issues?labels=needswiki&state=open,closed)
+    and add the relevant info to the [wiki](https://github.com/runeandre/crouton_for_the_oldbooks/wiki).
     Or just add things to/improve things in the wiki in general, but do try to
     keep it relevant and organized.
   * Really like a certain desktop environment, but not up for coding? Open or

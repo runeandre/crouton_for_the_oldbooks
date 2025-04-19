@@ -121,4 +121,4 @@
 - `croutonpowerd -i command and arguments`可以指定在chroot执行某些命令时关闭Chrome OS的电源管理
 - `touch`安装目标可以改善触摸屏设备的使用体验
 - 本项目Wiki中有关于文件共享的介绍
-- [Wiki](https://github.com/dnschneid/crouton/wiki)中也有更多其他提示（英文）
+- [Wiki](https://github.com/runeandre/crouton_for_the_oldbooks/wiki)中也有更多其他提示（英文）

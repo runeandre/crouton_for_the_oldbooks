@@ -535,7 +535,7 @@ Press Ctrl-C to abort; installation will continue in 5 seconds." 1>&2
 That means you may have issues updating now or in the future.
 You should upgrade your chroot to a supported version as soon as possible.
 Refer to the wiki for upgrade instructions:
-  https://github.com/dnschneid/crouton/wiki/Upgrade-chroot-release
+  https://github.com/runeandre/crouton_for_the_oldbooks/wiki/Upgrade-chroot-release
 Press Ctrl-C to abort; normal update will continue in 5 seconds." 1>&2
     fi
     sleep 5
