@@ -16,7 +16,7 @@ The commit where debootstrap was updated, and crouton stopped working on my old 
 2. Open a shell: Ctrl+Alt+T -> Type 'shell' and press enter.
 3. Open the home folder: 'cd'
 4. Open the Downloads folder: 'cd Downloads'
-5. Download crouton to the Chromebook: 'curl https://github.com/runeandre/crouton_for_the_oldbooks/raw/refs/heads/master/release/crouton --output crouton'
+5. Download crouton to the Chromebook: 'curl https://github.com/runeandre/crouton_for_the_oldbooks/raw/refs/heads/master/installer/crouton --output crouton'
 6. Copy crouton to bin folder: 'sudo install -Dt /usr/local/bin -m 755 crouton'
 7. Install Ubuntu 20.04 (Focal) with XFCE: 'sudo crouton -t xfce -r focal'
 8. Start Ubuntu: 'sudo startxfce4'"
@@ -87,7 +87,7 @@ updates, the steps below will likely work for you. However, if you are still
 having trouble, please try the [community-maintained instructions](https://github.com/runeandre/crouton_for_the_oldbooks/wiki/Updated-Installation-Instructions-for-Crouton).
 
 In addition, goo.gl is going away! That means the goo.gl/fd3zc you know and love
-has been replaced with [git.io/JZEs0](https://git.io/JZEs0). That's a zero at
+has been replaced with [https://github.com/runeandre/crouton_for_the_oldbooks/raw/refs/heads/master/installer/crouton](https://github.com/runeandre/crouton_for_the_oldbooks/raw/refs/heads/master/installer/crouton). That's a zero at
 the end, if you were wondering. Both just point to
 [github](https://raw.githubusercontent.com/dnschneid/crouton/master/installer/crouton),
 so you can always just memorize the full link instead, which (fun fact) does not
@@ -177,7 +177,7 @@ crouton is a powerful tool, and there are a *lot* of features, but basic usage
 is as simple as possible by design.
 
 If you're just here to use crouton, you can grab the latest release from
-[https://git.io/JZEs0](https://git.io/JZEs0). Download it, pop open a
+[https://github.com/runeandre/crouton_for_the_oldbooks/raw/refs/heads/master/installer/crouton](https://github.com/runeandre/crouton_for_the_oldbooks/raw/refs/heads/master/installer/crouton). Download it, pop open a
 shell (Ctrl+Alt+T, type `shell` and hit enter), make the installer executable
 with `sudo install -Dt /usr/local/bin -m 755 ~/Downloads/crouton`, then launch
 it with `sudo crouton` to see the help text. See the "examples" section for some
@@ -311,7 +311,7 @@ graphical sessions as Chromium OS windows.*
 
 *If for some reason you have to run the installer without touching the local
 disk, you can (for the time being) run
-`curl -fL https://git.io/JZEs0 | sudo sh -s -- options_for_crouton_installer`.
+`curl -fL https://github.com/runeandre/crouton_for_the_oldbooks/raw/refs/heads/master/installer/crouton | sudo sh -s -- options_for_crouton_installer`.
 Note that this will definitely break in the near future, so don't depend on it.*
 
 ### Downloading bootstrap files over and over again is a waste of time
