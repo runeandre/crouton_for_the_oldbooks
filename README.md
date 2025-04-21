@@ -16,7 +16,7 @@ The commit where debootstrap was updated, and crouton stopped working on my old 
 2. Open a shell: Ctrl+Alt+T -> Type 'shell' and press enter.
 3. Open the home folder: 'cd'
 4. Open the Downloads folder: 'cd Downloads'
-5. Download crouton to the Chromebook: 'curl https://github.com/runeandre/crouton_for_the_oldbooks/raw/refs/heads/master/installer/crouton --output crouton'
+5. Download crouton to the Chromebook: 'curl -L https://github.com/runeandre/crouton_for_the_oldbooks/raw/refs/heads/master/installer/crouton --output crouton'
 6. Copy crouton to bin folder: 'sudo install -Dt /usr/local/bin -m 755 crouton'
 7. Install Ubuntu 20.04 (Focal) with XFCE: 'sudo crouton -t xfce -r focal'
 8. Start Ubuntu: 'sudo startxfce4'"
