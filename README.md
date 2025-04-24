@@ -27,7 +27,7 @@ List Linux versions: 'crouton -r list'
 The instructions are basically the same as the original.
 <br><b>The main difference is using this as the source, and that "focal" is specified as the Ubuntu version to use.</b>
 
-You can also use the following script to modify crouton yourself and host everything locally on your Linux PC: [https://github.com/runeandre/crouton_for_the_oldbooks_script]
+You can also use the following script to modify crouton yourself and host everything locally on your Linux PC: https://github.com/runeandre/crouton_for_the_oldbooks_script
 
 ![ChromeOS 75 with Xubuntu 20.04](./assets/ChromeOS_75_with_Xubuntu_20.04.png)
 
